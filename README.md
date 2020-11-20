@@ -10,6 +10,8 @@ Things you may want to cover:
 * System dependencies
 
 * Configuration
+Adicionando bootstrap
+yarn add bootstrap jquery popper.js
 
 * Database creation
 
