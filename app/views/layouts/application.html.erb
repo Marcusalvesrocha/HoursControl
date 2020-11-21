@@ -19,9 +19,16 @@
   <body>
 
     <%= render 'home/partials/header' %>
-
+    
     <div class="container">
     <br/>
+    
+      <% flash.each do |name, msg| %>
+       
+        <div class="alert alert-success" role="alert">
+          <%= msg %>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
 
