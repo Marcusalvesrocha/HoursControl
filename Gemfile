@@ -18,6 +18,7 @@ gem 'turbolinks', '~> 5'
 
 gem 'jbuilder', '~> 2.7'
 
+gem 'rails-i18n', '~> 6.0.0'
 
 # Auth
 gem 'devise_token_auth', '~> 1.1.4'
