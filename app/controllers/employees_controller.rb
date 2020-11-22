@@ -1,5 +1,8 @@
 class EmployeesController < ApplicationController
+
   before_action :set_employee, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!
+  before_action :verify_user
 
   # GET /employees
   # GET /employees.json
@@ -81,4 +84,11 @@ class EmployeesController < ApplicationController
                     ]
       )
     end
+
+    def verify_user
+      if current_user.trainee?
+        redirect_to root_path
+      end
+    end
+    
 end
