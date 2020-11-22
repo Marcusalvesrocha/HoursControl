@@ -5,5 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
   include DeviseTokenAuth::Concerns::User
 
-  enum function: {manager: 0, estagio: 1}
+  has_one :employee
+
+  enum function: {manager: 0, trainee: 1}
 end

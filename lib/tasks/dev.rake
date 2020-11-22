@@ -13,13 +13,17 @@ namespace :dev do
     puts "MIGRANDO OS MODELS PARA O BANCO DE DADOS"
     puts %x(rails db:migrate)
     puts "CADASTRANDO USUARIO ADMIN"
-    User.create!(
-      email: 'admin@hc.com', 
-      name: 'Clevinalson Lima de Castro Silva e Melo',
-      function: 0,
-      password: PASSWORD_DEFAULT, 
-      password_confirmation: PASSWORD_DEFAULT
-    )
+    
+    Employee.create!(
+      name: "Cleniosvaldo Jodércio de Lima e Couto Júnior", 
+      age: 45, 
+      user: User.create!(
+              email: "t@t.com", 
+              password: PASSWORD_DEFAULT, 
+              password_confirmation: PASSWORD_DEFAULT, 
+              function: 0)
+      )
+    
     puts "Usuario:#{User.last.email} - Senha: #{PASSWORD_DEFAULT}"
     puts "---------------------------------------------------------"
   end

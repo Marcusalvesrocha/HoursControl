@@ -3,7 +3,6 @@ class CreateEmployees < ActiveRecord::Migration[6.0]
     create_table :employees do |t|
       t.string :name
       t.integer :age
-      t.integer :function
       t.references :user, null: false, foreign_key: true
 
       t.timestamps
