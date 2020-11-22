@@ -21,10 +21,30 @@
     <%= form.number_field :age %>
   </div>
 
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
+
+  <%= form.fields_for :user do |use| %>
+
+    <div class="field">
+      <%= use.label :email %>
+      <%= use.text_field :email %><br>
+    </div>
+
+    <div class="field">
+      <%= use.label :function %>
+      <%= use.text_field :function %><br>
+    </div>
+
+    <div class="field">
+      <%= use.label :password %>
+      <%= use.text_field :password %><br>
+    </div>
+
+    <div class="field">
+      <%= use.label :password_confirmation %>
+      <%= use.text_field :password_confirmation %><br>
+    </div>
+
+  <%end%>
 
   <div class="actions">
     <%= form.submit %>

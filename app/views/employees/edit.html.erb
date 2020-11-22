@@ -1,6 +1,6 @@
-<h1>Editing Employee</h1>
+<h1>Editar <%=@employee.name%></h1>
 
 <%= render 'form', employee: @employee %>
 
-<%= link_to 'Show', @employee %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to 'Mostrar', @employee, class: "btn btn-dark" %> 
+<%= link_to 'Voltar', employees_path, class: "btn btn-dark" %>

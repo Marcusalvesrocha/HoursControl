@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @employee.name %>
 </p>
 
 <p>
-  <strong>Age:</strong>
+  <strong>Idade:</strong>
   <%= @employee.age %>
 </p>
 
 <p>
-  <strong>User:</strong>
-  <%= @employee.user_id %>
+  <strong>Função:</strong>
+  <%= @employee.user.function %>
 </p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to 'Editar', edit_employee_path(@employee), class: "btn btn-dark" %> 
+<%= link_to 'Voltar', employees_path, class: "btn btn-dark" %>
