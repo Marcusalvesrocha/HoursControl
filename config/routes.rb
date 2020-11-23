@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   get 'time_pointing/index'
   get 'time_pointing/register'
+  get 'time_pointing/show'
   
   get 'home/about'
   root to: 'home#index'

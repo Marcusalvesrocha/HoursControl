@@ -18,7 +18,7 @@ namespace :dev do
       name: "Cleniosvaldo Jodércio de Lima e Couto Júnior", 
       age: 45, 
       user: User.create!(
-              email: "t@t.com", 
+              email: "admin@hc.com", 
               password: PASSWORD_DEFAULT, 
               password_confirmation: PASSWORD_DEFAULT, 
               function: 0)

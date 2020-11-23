@@ -1,22 +1,4 @@
 
 <h1>Registrado com sucesso</h1>
 
-<table class="table  table-bordered table-striped">
-  <thead class="thead-dark">
-    <tr>
-      <th>Hora</th>
-      <th>Turno</th>
-      <th>Entrada/Saida</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @time_pointing.each do |t| %>
-      <tr>
-        <td><%= t.point_registration.strftime("%H:%M:%S")%></td>
-        <td><%= t.shift%></td>
-        <td><%= t.kind%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%= render  "list" %>

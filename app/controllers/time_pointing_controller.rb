@@ -6,20 +6,41 @@ class TimePointingController < ApplicationController
     @all = TimePointing.find_by(kind: 0)
   end
 
+  def show
+    @time_pointing = TimePointing.where(employee: get_employee, 
+      point_registration: (Time.now.midnight )..Time.now.midnight+ 1.day)
+
+  end
+  
+
   def register
     @time_pointing.employee = get_employee
     @time_pointing.point_registration = Time.now
-    @time_pointing.shift = 0
+
+    if count_kind <= 1
+      @time_pointing.shift = 0
+    else
+      if count_kind >= 2  
+        @time_pointing.shift = 1
+      end
+    
+    end
+
     @time_pointing.kind = 0
     
-    if @time_pointing.save
-      @time_pointing = TimePointing.where(employee: get_employee)
-      #@time_pointing = TimePointing.all
+    if count_kind < 4
+      if @time_pointing.save
+        @time_pointing = TimePointing.where(employee: get_employee, 
+                                            point_registration: (Time.now.midnight )..Time.now.midnight+ 1.day)
+        #@time_pointing = TimePointing.all
+      end
+    else
+      redirect_to time_pointing_show_path
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+  
     def set_time_pointing
       @time_pointing = TimePointing.new
       #@time_pointing = TimePointing.find(params[:id])
@@ -38,4 +59,9 @@ class TimePointingController < ApplicationController
                     :kind
       )
     end
+
+    def count_kind
+      TimePointing.where(employee: get_employee).length
+    end
+    
 end
