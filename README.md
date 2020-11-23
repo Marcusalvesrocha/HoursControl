@@ -9,7 +9,6 @@ yarn add bootstrap jquery popper.js
 
 * Configurando o sistema
 Execute:
- rails dev:setup 
 
 rails dev:setup
 
