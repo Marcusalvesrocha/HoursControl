@@ -56,5 +56,4 @@ ActiveRecord::Schema.define(version: 2020_11_23_000857) do
   end
 
   add_foreign_key "employees", "users"
-  add_foreign_key "time_pointings", "employees"
 end
