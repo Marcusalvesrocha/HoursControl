@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   resources :employees
+  #resources :time_pointing, only: [:index, :new, :create, :destroy]
+
+  get 'time_pointing/index'
+  get 'time_pointing/register'
+  
   get 'home/about'
   root to: 'home#index'
   

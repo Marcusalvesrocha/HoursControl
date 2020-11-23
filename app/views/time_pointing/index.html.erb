@@ -1,0 +1,34 @@
+<h1>Registro de Ponto</h1>
+  <%=@time_pointing.employee.name%>
+</BR>
+
+  <h3><SPAN class="position-absolute" ID="Clock">00:00:00</SPAN></h3>
+
+</BR>
+
+
+  <%= link_to 'Registrar', time_pointing_register_path, class: "btn btn-blue" %>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+  var Elem = document.getElementById("Clock");
+  function Horario(){ 
+    var Hoje = new Date(); 
+    var Horas = Hoje.getHours(); 
+    if(Horas < 10){ 
+      Horas = "0"+Horas; 
+    } 
+    var Minutos = Hoje.getMinutes(); 
+    if(Minutos < 10){ 
+      Minutos = "0"+Minutos; 
+    } 
+    var Segundos = Hoje.getSeconds(); 
+    if(Segundos < 10){ 
+      Segundos = "0"+Segundos; 
+    } 
+    Elem.innerHTML = Horas+":"+Minutos+":"+Segundos; 
+    } 
+    window.setInterval("Horario()",1000);
+//-->
+</SCRIPT>
