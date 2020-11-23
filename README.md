@@ -18,10 +18,9 @@ comando executará:
 - rails db:create
 - rails db:migrate
 
-
 * Cria um usuario de perfil Manager
 
-  -Usuário: estagio@hc.com
+  -Usuário: admin@hc.com
   
-  -Senha: 123456
+  -Senha: 123123
 
