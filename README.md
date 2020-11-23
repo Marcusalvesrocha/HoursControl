@@ -17,7 +17,11 @@ comando executará:
 - rails db:drop
 - rails db:create
 - rails db:migrate
-- Cria um usuario de perfil Estagiário
+
+
+* Cria um usuario de perfil Estagiário
+
   -Usuário: estagio@hc.com
+  
   -Senha: 123456
 
