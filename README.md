@@ -19,7 +19,7 @@ comando executará:
 - rails db:migrate
 
 
-* Cria um usuario de perfil Estagiário
+* Cria um usuario de perfil Manager
 
   -Usuário: estagio@hc.com
   
